@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+
+<GridPane hgap="10" vgap="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cardsapp.NewSaleController" styleClass="background">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="Card Code"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="codeFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="Qty"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="qtyFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="2" text="Printing Charge"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="printingFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="Packing Charge"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="packingFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="Discount"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="discountFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="5" text="Customer Name"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="customerNameFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="6" text="Customer Phone"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" fx:id="customerPhoneFld" />
+    <HBox GridPane.columnIndex="1" GridPane.rowIndex="7" spacing="10" alignment="CENTER_RIGHT" >
+        <Button text="Cancel" onAction="#onCancel" />
+        <Button text="Sold" onAction="#onSale" />
+    </HBox>
+</GridPane>

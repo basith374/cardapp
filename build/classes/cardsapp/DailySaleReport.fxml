@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+<?import javafx.util.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="cardsapp.DailySaleReportController">
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <BorderPane.margin>
+                <Insets top="10" right="0" bottom="10" left="0" />
+            </BorderPane.margin>
+            <Label text="Date" />
+            <DatePicker onAction="#onDateChange" fx:id="datePicker">
+            </DatePicker>
+            <Button text="Delete" onAction="#onDelete" />
+        </HBox>
+    </top>
+    <center>
+        <TableView minWidth="800" fx:id="salesTable">
+            <BorderPane.margin>
+                <Insets top="0" right="0" bottom="10" left="0" />
+            </BorderPane.margin>
+            <columns>
+                <TableColumn text="Card Code" prefWidth="142">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="code"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Qty" prefWidth="71">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="qty"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Retail Price" prefWidth="142">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Discount" prefWidth="142">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="discount"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Printing Chg" prefWidth="162">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="printing"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Packing Chg" prefWidth="162">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="packing"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Total Amount" prefWidth="180">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="total"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <Button text="Print Single" onAction="#printSingle" />
+            <Button text="Print" onAction="#onPrint" />
+        </HBox>
+    </bottom>
+</BorderPane>

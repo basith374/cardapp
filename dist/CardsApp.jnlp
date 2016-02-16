@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CardsApp.jnlp">
+  <information>
+    <title>CardsApp</title>
+    <vendor>bluroe</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CardsApp.jar" size="42506" download="eager" />
+    <jar href="lib/junit-4.10.jar" size="253160" download="eager" />
+    <jar href="lib/sqlite-jdbc-3.7.2.jar" size="3201133" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="CardsApp" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="cardsapp.CardsApp"  name="CardsApp" />
+  <update check="always"/>
+</jnlp>

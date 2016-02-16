@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+<?import cardsapp.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="cardsapp.StockReportController" >
+    <top>
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <BorderPane.margin>
+                <Insets top="10" right="0" bottom="10" left="0" />
+            </BorderPane.margin>
+            <Button text="Delete" onAction="#deleteStock" />
+            <Button text="Show Details" onAction="#toggleDetails" />
+        </HBox> 
+    </top>
+    <center>
+        <TableView GridPane.columnIndex="0" GridPane.rowIndex="0" minWidth="800" fx:id="stockTable">
+            <columns>
+                <TableColumn text="Card Code" prefWidth="334" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="code"></PropertyValueFactory>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Total Quantity" prefWidth="333" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="qty"></PropertyValueFactory>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Retail Price" prefWidth="333" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="retailPrice"></PropertyValueFactory>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Actual Price" prefWidth="250" visible="false" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="actualPrice"></PropertyValueFactory>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Mfg Co." prefWidth="250" visible="false" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="company"></PropertyValueFactory>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+<!--            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <Card code="100" qty="500" price="60.0" mfgCo="Shoozie Corp." />
+                    <Card code="101" qty="300" price="45.25" mfgCo="Shitzu and Sons" />
+                    <Card code="102" qty="400" price="50.75" mfgCo="SOLAR" />
+                    <Card code="103" qty="650" price="75.5" mfgCo="Frickzen" />
+                </FXCollections>
+            </items>-->
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <BorderPane.margin>
+                <Insets top="10" right="0" bottom="0" left="0" />
+            </BorderPane.margin>
+            <Button text="Print" onAction="#onPrint" />
+        </HBox>
+    </bottom>
+</BorderPane>

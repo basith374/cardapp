@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.fxml.*?>
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="cardsapp.HomeController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+    <MenuBar fx:id="menuBar">
+        <menus>
+            <Menu text="File">
+                <items>
+                    <MenuItem text="Exit" onAction="#onExit" />
+                </items>
+            </Menu>
+            <Menu text="Edit">
+                <items>
+                    <MenuItem text="Change Password" onAction="#changePass" />
+                </items>
+            </Menu>
+            <Menu text="Help">
+                <items>
+                    <MenuItem text="About" onAction="#showAbout" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <BorderPane styleClass="background" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+        <top>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <BorderPane.margin>
+                    <Insets top="0" right="0" bottom="10" left="0" />
+                </BorderPane.margin>
+                <Button text="New Stock" onAction="#newStock" fx:id="newStockBtn" />
+                <Button text="New Sale" onAction="#newSale" />
+            </HBox> 
+        </top>
+        <center>
+            <TabPane fx:id="tabPane" >
+                <Tab text="Inventory" closable="false" >
+                </Tab>
+                <Tab text="Daily Sales Report" closable="false" >
+                </Tab>
+            </TabPane>
+        </center>
+    </BorderPane>
+</VBox>

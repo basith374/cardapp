@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+
+<GridPane hgap="10" vgap="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cardsapp.NewStockController" styleClass="background">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="Card Code" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="codeFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="Qty" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="qtyFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="2" text="Retail Price" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="retailPriceFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="Actual Price" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="actualPriceFld" />
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="Manufacturing Company" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="mfgCoFld" />
+    <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="5" spacing="10" >
+        <Button text="Cancel" onAction="#onCancel" />
+        <Button text="Save" onAction="#onStock" />
+        <Button text="Add Stock" onAction="#onStockAndClose" />
+    </HBox>
+</GridPane>
